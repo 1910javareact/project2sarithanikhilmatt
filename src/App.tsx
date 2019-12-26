@@ -4,22 +4,21 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './Store';
-import NavBar from './components/navbar/NavBar';
-import { Home } from './components/home/Home';
-import { Options } from './components/options/Options';
+import HomeComponent from './components/home/HomeComponent';
+import OptionsComponent from './components/options/OptionsComponent';
+import NavBarComponent from './components/navbar/NavBarComponent';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <Provider store={store}>
         <Router>
-          {/* <UserLoginStateComponent> */}
           <nav>
-            <NavBar />
+            <NavBarComponent />
           </nav>
           <Switch>
-            <Route path='/home' component={Home} />
-            <Route path='/options' component={Options} />
+            <Route path='/home' component={HomeComponent} />
+            <Route path='/options' component={OptionsComponent} />
           </Switch>
         </Router>
       </Provider>

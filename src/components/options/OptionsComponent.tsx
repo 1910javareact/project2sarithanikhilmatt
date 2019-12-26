@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class Options extends React.Component<any, any> {
+export class OptionsComponent extends React.Component<any, any> {
     render() {
         return (
             <div>
@@ -8,3 +8,5 @@ export class Options extends React.Component<any, any> {
         );
     }
 }
+
+export default OptionsComponent
