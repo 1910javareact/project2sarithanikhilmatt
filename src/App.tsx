@@ -8,11 +8,12 @@ import { store } from './Store';
 const App: React.FC = () => {
   return (
     <div className="App">
-     <Provider store={store}>
-      <Router>
-        <Route path='/home' />
-        <Route path='/options' />
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Route path='/home' />
+          <Route path='/options' />
+        </Router>
+      </Provider>
     </div>
   );
 }
