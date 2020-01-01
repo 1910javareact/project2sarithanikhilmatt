@@ -3,25 +3,42 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextFeild from 'material-ui/TextField';
 import { RaisedButton } from 'material-ui';
 
-export class ProjectNameComponent extends React.Component {
+export class AddTaskComponent extends React.Component {
     render() {
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <h1>Name your project </h1>
+                    
+                    <h1>Add Tasks </h1>
+                    <p>Add your first two tasks</p>
                     <TextFeild
                         hintText="Enter Your Project name"
-                        floatingLabelText="Tuesdaycom Project"
+                        floatingLabelText="Project Propasal"
                     />
                     <br />
+                    <TextFeild
+                        // hintText="Enter Your Project name"
+                        floatingLabelText="Login"
+                    />
+                    <br />
+                    {/* <Button color='danger'>Next</Button> */}
                     <RaisedButton
                         label="Next"
                         primary={true}
                         style={styles.button}
                     />
-                    <br />
+                    <br />  
+
+
+
+
+
+
+
                 </React.Fragment>
+
             </MuiThemeProvider>
+
         )
     }
 }
@@ -30,4 +47,4 @@ const styles = {
         margin: 15
     }
 }
-export default ProjectNameComponent;
+export default AddTaskComponent;

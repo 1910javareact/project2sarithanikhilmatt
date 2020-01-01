@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import {
   Collapse,
   Navbar,
@@ -7,44 +8,30 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText
 } from 'reactstrap';
 
-const NavBarComponent = (props:any) => {
-  const [isOpen, setIsOpen] = useState(false); //this is a hook
+const NavBarComponent = (props: any) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Tuesday</NavbarBrand>
+        <NavbarBrand href="/">Tuesday.com</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="https://github.com/1910javareact/project2sarithanikhilmatt">GitHub</NavLink>
+              <NavLink href="/projectname">Start a Project!</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Login
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Profile
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Board
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            <NavbarText>Logged in as: </NavbarText>
           </Nav>
+          <NavbarText>
+            <NavLink href="/login">
+              <AccountCircleIcon />
+            </NavLink>
+          </NavbarText>
         </Collapse>
       </Navbar>
     </div>
