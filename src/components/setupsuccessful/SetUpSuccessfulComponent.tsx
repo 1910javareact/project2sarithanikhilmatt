@@ -1,31 +1,23 @@
 import React from "react"
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { RaisedButton } from 'material-ui';
 import { Link } from "react-router-dom";
+import { ThemeProvider, Button } from "@material-ui/core";
 
 export class SetUpSuccessfulComponent extends React.Component {
     render() {
         return (
             <div className="setupSuccessful">
-                <MuiThemeProvider>
+                <ThemeProvider theme>
                     <React.Fragment>
                         <h1>Yay!! Your first board is ready:)</h1>
                         <p>This is just the beginning! Continue building your workflow by</p>
                         <p>adding more projects, groups and tasks</p>
-                        <br />
-                        <Link to="/board">
-                            <RaisedButton label="Go to my board" primary={true} style={styles.button} />
+                        <Link to='/board'>
+                            <Button variant="contained" color="primary">GO TO MY BOARD</Button>
                         </Link>
-                        <br />  
                     </React.Fragment>
-                </MuiThemeProvider>
+                </ThemeProvider>
             </div>
         )
-    }
-}
-const styles = {
-    button: {
-        margin: 15
     }
 }
 
