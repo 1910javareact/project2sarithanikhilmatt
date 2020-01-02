@@ -1,22 +1,34 @@
-import React from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import React from "react"
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import TextFeild from 'material-ui/TextField';
+import RaisedButton from "material-ui/RaisedButton";
+import { Link } from "react-router-dom";
 
-const UserLoginComponent = (props:any) => {
-  return (
-    <div>
-    <Form inline>
-      <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-        <Label for="exampleEmail" className="mr-sm-2">Email</Label>
-        <Input type="email" name="email" id="exampleEmail" placeholder="user@gmail.com" />
-      </FormGroup>
-      <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-        <Label for="examplePassword" className="mr-sm-2">Password</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="password" />
-      </FormGroup>
-      <Button>Submit</Button>
-    </Form>
-    </div>
-  );
+export class UserLoginComponent extends React.Component {
+    render(){
+        return(
+          <div className="login">
+            <MuiThemeProvider>
+                <React.Fragment>
+                    <h1>Login</h1>
+                    <TextFeild  floatingLabelText="e-mail" />   
+                    <br />
+                    <TextFeild floatingLabelText="password" />  
+                    <br />
+                    <Link to="/addtask">
+                        <RaisedButton label="Next" primary={true} style={styles.button} />
+                    </Link>
+                    <br />
+                </React.Fragment>
+            </MuiThemeProvider>
+          </div>
+        )
+    }
+}
+const styles = {
+    button: {
+        margin: 15
+    }
 }
 
-export default UserLoginComponent;
+export default UserLoginComponent

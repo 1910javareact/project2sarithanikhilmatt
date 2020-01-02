@@ -7,21 +7,22 @@ import { Link } from "react-router-dom";
 export class GroupNameComponent extends React.Component {
     render(){
         return(
-            <MuiThemeProvider>
-                <React.Fragment>
-                    <h1>Name you Group</h1>
-                    <p>Organize your group by grouping task together</p>
-                    <TextFeild  floatingLabelText="Things To Do" />   
-                    <br />
-                    <TextFeild floatingLabelText="Done" />  
-                    <br />
-                    <Link to="/addtask">
-                        <RaisedButton label="Next" primary={true} style={styles.button}
-                        />
-                    </Link>
-                    <br />
-                </React.Fragment>
-            </MuiThemeProvider>
+            <div className="groupName">
+                <MuiThemeProvider>
+                    <React.Fragment>
+                        <h1>Name your group</h1>
+                        <p>Organize your group by grouping task together</p>
+                        <TextFeild  floatingLabelText="Things To Do" />   
+                        <br />
+                        <TextFeild floatingLabelText="Done" />  
+                        <br />
+                        <Link to="/addtask">
+                            <RaisedButton label="Next" primary={true} style={styles.button} />
+                        </Link>
+                        <br />
+                    </React.Fragment>
+                </MuiThemeProvider>
+            </div>
         )
     }
 }
@@ -30,4 +31,5 @@ const styles = {
         margin: 15
     }
 }
+
 export default GroupNameComponent;
