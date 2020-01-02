@@ -2,6 +2,7 @@ import React from "react"
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextFeild from 'material-ui/TextField';
 import RaisedButton from "material-ui/RaisedButton";
+import { Link } from "react-router-dom";
 
 export class GroupNameComponent extends React.Component {
     render(){
@@ -14,11 +15,10 @@ export class GroupNameComponent extends React.Component {
                     <br />
                     <TextFeild floatingLabelText="Done" />  
                     <br />
-                    <RaisedButton
-                        label="Next"
-                        primary={true}
-                        style={styles.button}
-                    />
+                    <Link to="/addtask">
+                        <RaisedButton label="Next" primary={true} style={styles.button}
+                        />
+                    </Link>
                     <br />
                 </React.Fragment>
             </MuiThemeProvider>

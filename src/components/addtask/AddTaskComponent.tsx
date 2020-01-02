@@ -2,6 +2,7 @@ import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextFeild from 'material-ui/TextField';
 import { RaisedButton } from 'material-ui';
+import { Link } from 'react-router-dom';
 
 export class AddTaskComponent extends React.Component {
     render() {
@@ -22,11 +23,10 @@ export class AddTaskComponent extends React.Component {
                     />
                     <br />
                     {/* <Button color='danger'>Next</Button> */}
-                    <RaisedButton
-                        label="Next"
-                        primary={true}
-                        style={styles.button}
-                    />
+                    <Link to="/setupsuccessful">
+                        <RaisedButton label="Next" primary={true} style={styles.button}
+                        />
+                    </Link>
                     <br />  
 
 

@@ -1,6 +1,7 @@
 import React from "react"
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { RaisedButton } from 'material-ui';
+import { Link } from "react-router-dom";
 
 export class SetUpSuccessfulComponent extends React.Component {
     render() {
@@ -16,12 +17,10 @@ export class SetUpSuccessfulComponent extends React.Component {
                     <p>adding more projects, groups and tasks</p>
 
                     <br />
-                    {/* <Button color='danger'>Next</Button> */}
-                    <RaisedButton
-                        label="Go to my board"
-                        primary={true}
-                        style={styles.button}
-                    />
+                    <Link to="/addtask">
+                        <RaisedButton label="Go to my board" primary={true} style={styles.button}
+                        />
+                    </Link>
                     <br />  
 
 

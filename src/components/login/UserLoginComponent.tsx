@@ -3,6 +3,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const UserLoginComponent = (props:any) => {
   return (
+    <div>
     <Form inline>
       <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
         <Label for="exampleEmail" className="mr-sm-2">Email</Label>
@@ -14,6 +15,7 @@ const UserLoginComponent = (props:any) => {
       </FormGroup>
       <Button>Submit</Button>
     </Form>
+    </div>
   );
 }
 
