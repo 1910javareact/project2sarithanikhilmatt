@@ -7,38 +7,23 @@ import { Link } from 'react-router-dom';
 export class AddTaskComponent extends React.Component {
     render() {
         return (
-            <MuiThemeProvider>
-                <React.Fragment>
-                    
-                    <h1>Add Tasks </h1>
-                    <p>Add your first two tasks</p>
-                    <TextFeild
-                        hintText="Enter Your Project name"
-                        floatingLabelText="Project Propasal"
-                    />
-                    <br />
-                    <TextFeild
-                        // hintText="Enter Your Project name"
-                        floatingLabelText="Login"
-                    />
-                    <br />
-                    {/* <Button color='danger'>Next</Button> */}
-                    <Link to="/setupsuccessful">
-                        <RaisedButton label="Next" primary={true} style={styles.button}
-                        />
-                    </Link>
-                    <br />  
+            <div className="addTask">
+                <MuiThemeProvider>
+                    <React.Fragment>
+                        <h1>Add Tasks </h1>
+                        <p>Add your first two tasks</p>
+                        <TextFeild hintText="Enter Your Project name" floatingLabelText="Project Propasal"/>
+                        <br />
+                            <TextFeild floatingLabelText="Login"/>
+                        <br />
 
-
-
-
-
-
-
-                </React.Fragment>
-
-            </MuiThemeProvider>
-
+                        <Link to="/setupsuccessful">
+                            <RaisedButton label="Next" primary={true} style={styles.button}/>
+                        </Link>
+                        <br />  
+                    </React.Fragment>
+                </MuiThemeProvider>
+            </div>
         )
     }
 }
@@ -47,4 +32,5 @@ const styles = {
         margin: 15
     }
 }
+
 export default AddTaskComponent;
