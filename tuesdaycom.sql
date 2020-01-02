@@ -27,11 +27,12 @@ create table task (
 );
 
 create table board (
+	board_id serial primary key
 	user_id int4 references users (user_id),
     project_id int4 references project (project_id),--we reference a table name, then a column in that tablename
 	group_id int4 references group_data (group_id),
-	task_id int4 references task (task_id),
-	constraint board_pk primary key (user_id, project_id, group_id, task_id)
+	task_id int4 references task (task_id)
+	--constraint board_pk primary key (user_id, project_id, group_id, task_id)
 );
 
 insert into users("firstname", "lastname", username, "password", email)
