@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export class HomeComponent extends React.Component {
     render() {
         return (
-            <div>
+            <div className="fillWindow">
                 <MuiThemeProvider>
                     <React.Fragment>
                         <br />

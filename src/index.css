@@ -26,41 +26,68 @@ code {
 
 .login {
   background-color: #C18D5E;
-  width: null;
-  height: null
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .projectName {
   background-color: #C18D5E;
-  width: null;
-  height: null
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .groupName {
   background-color: #C18D5E;
-  width: null;
-  height: null
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .addTask {
   background-color: #C18D5E;
-  width: null;
-  height: null
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .setupSuccessful {
   background-color: #C18D5E;
-  width: null;
-  height: null
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .boardComponent{
   background: url("./assets/wood_board.jpeg") no-repeat; 
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
   background-size: cover;
-  min-width: 100%;
-  min-height: 100%;
 }
 
 .buttonColor {
   background-color: #7E5731;
 } 
+
+.fillWindow {
+  background-color: #C18D5E;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
