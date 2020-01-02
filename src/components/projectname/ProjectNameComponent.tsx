@@ -17,7 +17,7 @@ export class ProjectNameComponent extends React.Component {
                         />
                         <br />
                         <Link to="/groupname">
-                            <RaisedButton label="Next" primary={true} style={styles.button} className="buttonColor" />
+                            <RaisedButton label="Next" primary={true} style={styles.button} />
                         </Link>
                         <br />
                     </React.Fragment>
