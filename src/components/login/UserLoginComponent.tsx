@@ -16,11 +16,9 @@ export class UserLoginComponent extends React.Component {
                                 <TextField id="outlined-basic" label="Password" variant="outlined" margin="normal" />
                             </div>
                         </form>
-                        <div>
                         <Link to='/board'>
                             <Button variant="contained" color="primary">Next</Button>
                         </Link>
-                        </div>
                     </React.Fragment>
                 </ThemeProvider>
             </div>

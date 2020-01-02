@@ -9,8 +9,8 @@ export class GroupNameComponent extends React.Component {
             <div className="login">
             <ThemeProvider theme>
                 <React.Fragment>
-                    <h1>Name your group</h1>
-                    <p>Organize your group by grouping tasks together</p>
+                    <h1>Name your groups</h1>
+                    <p>Organize your groups by grouping tasks together</p>
                     <form noValidate autoComplete="off">
                         <div>
                             <TextField id="outlined-basic" label="Things to do" variant="outlined" margin="normal" />
@@ -19,7 +19,7 @@ export class GroupNameComponent extends React.Component {
                             <TextField id="outlined-basic" label="Done" variant="outlined" margin="normal" />
                         </div>
                     </form>
-                    <Link to='/board'>
+                    <Link to='/addtask'>
                         <Button variant="contained" color="primary">Next</Button>
                     </Link>
                 </React.Fragment>

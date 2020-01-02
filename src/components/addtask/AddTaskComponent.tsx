@@ -1,35 +1,30 @@
 import React from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TextFeild from 'material-ui/TextField';
-import { RaisedButton } from 'material-ui';
 import { Link } from 'react-router-dom';
+import { ThemeProvider, TextField, Button } from '@material-ui/core';
 
 export class AddTaskComponent extends React.Component {
-    render() {
-        return (
-            <div className="addTask">
-                <MuiThemeProvider>
+        render() {
+            return (
+                <div className="login">
+                <ThemeProvider theme>
                     <React.Fragment>
-                        <h1>Add Tasks </h1>
+                        <h1>Add tasks</h1>
                         <p>Add your first two tasks</p>
-                        <TextFeild hintText="Enter Your Project name" floatingLabelText="Project Propasal"/>
-                        <br />
-                            <TextFeild floatingLabelText="Login"/>
-                        <br />
-
-                        <Link to="/setupsuccessful">
-                            <RaisedButton label="Next" primary={true} style={styles.button}/>
+                        <form noValidate autoComplete="off">
+                            <div>
+                                <TextField id="outlined-basic" label="Project Proposal" variant="outlined" margin="normal" />
+                            </div>
+                            <div>
+                                <TextField id="outlined-basic" label="Login Authentication" variant="outlined" margin="normal" />
+                            </div>
+                        </form>
+                        <Link to='/setupsuccessful'>
+                            <Button variant="contained" color="primary">Next</Button>
                         </Link>
-                        <br />  
                     </React.Fragment>
-                </MuiThemeProvider>
+                </ThemeProvider>
             </div>
         )
-    }
-}
-const styles = {
-    button: {
-        margin: 15
     }
 }
 
