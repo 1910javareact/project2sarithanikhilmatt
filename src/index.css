@@ -79,10 +79,6 @@ code {
   background-size: cover;
 }
 
-.buttonColor {
-  background-color: #7E5731;
-} 
-
 .fillWindow {
   background-color: #C18D5E;
   height: 100%;
@@ -90,4 +86,12 @@ code {
   left: 0;
   width: 100%;
   overflow: hidden;
+}
+
+.buttonColor {
+  background-color: #7E5731;
+} 
+
+h1 {
+  color: #7E5731;
 }

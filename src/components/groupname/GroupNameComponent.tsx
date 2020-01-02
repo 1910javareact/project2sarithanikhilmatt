@@ -1,34 +1,31 @@
 import React from "react"
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import TextFeild from 'material-ui/TextField';
-import RaisedButton from "material-ui/RaisedButton";
 import { Link } from "react-router-dom";
+import { ThemeProvider } from "@material-ui/core/styles";
+import { TextField, Button } from "@material-ui/core";
 
 export class GroupNameComponent extends React.Component {
     render(){
         return(
-            <div className="groupName">
-                <MuiThemeProvider>
-                    <React.Fragment>
-                        <h1>Name your group</h1>
-                        <p>Organize your group by grouping task together</p>
-                        <TextFeild  floatingLabelText="Things To Do" />   
-                        <br />
-                        <TextFeild floatingLabelText="Done" />  
-                        <br />
-                        <Link to="/addtask">
-                            <RaisedButton label="Next" primary={true} style={styles.button} />
-                        </Link>
-                        <br />
-                    </React.Fragment>
-                </MuiThemeProvider>
-            </div>
+            <div className="login">
+            <ThemeProvider theme>
+                <React.Fragment>
+                    <h1>Name your groups</h1>
+                    <p>Organize your groups by grouping tasks together</p>
+                    <form noValidate autoComplete="off">
+                        <div>
+                            <TextField id="outlined-basic" label="Things to do" variant="outlined" margin="normal" />
+                        </div>
+                        <div>
+                            <TextField id="outlined-basic" label="Done" variant="outlined" margin="normal" />
+                        </div>
+                    </form>
+                    <Link to='/addtask'>
+                        <Button variant="contained" color="primary">Next</Button>
+                    </Link>
+                </React.Fragment>
+            </ThemeProvider>
+        </div>
         )
-    }
-}
-const styles = {
-    button: {
-        margin: 15
     }
 }
 
