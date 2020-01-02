@@ -10,16 +10,17 @@ export class UserLoginComponent extends React.Component {
                     <React.Fragment>
                         <form noValidate autoComplete="off">
                             <div>
-                            <TextField id="outlined-basic" label="Username" variant="outlined" margin="normal" />
+                                <TextField id="outlined-basic" label="Username" variant="outlined" margin="normal" />
                             </div>
-                           
                             <div>
-                            <TextField id="outlined-basic" label="Password" variant="outlined" margin="normal" />
+                                <TextField id="outlined-basic" label="Password" variant="outlined" margin="normal" />
                             </div>
                         </form>
+                        <div>
                         <Link to='/board'>
                             <Button variant="contained" color="primary">Next</Button>
                         </Link>
+                        </div>
                     </React.Fragment>
                 </ThemeProvider>
             </div>

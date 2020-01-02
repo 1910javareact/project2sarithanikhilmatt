@@ -1,34 +1,28 @@
 import React from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TextFeild from 'material-ui/TextField';
-import { RaisedButton } from 'material-ui';
 import { Link } from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { TextField, Button } from '@material-ui/core';
 
 export class ProjectNameComponent extends React.Component {
     render() {
         return (
-            <div className="projectName">  
-                <MuiThemeProvider>
+            <div className="login">
+                <ThemeProvider theme>
                     <React.Fragment>
                         <h1>Name your project</h1>
-                        <TextFeild
-                            hintText="Enter Your Project name"
-                            floatingLabelText="Tuesdaycom Project"
-                        />
-                        <br />
-                        <Link to="/groupname">
-                            <RaisedButton label="Next" primary={true} style={styles.button} />
+                        <form noValidate autoComplete="off">
+                            <div>
+                                <TextField id="outlined-basic" label="Project Name" variant="outlined" margin="normal" />
+                            </div>
+                        </form>
+                        <Link to='/groupname'>
+                            <Button variant="contained" color="primary">Next</Button>
                         </Link>
-                        <br />
                     </React.Fragment>
-                </MuiThemeProvider>
-                </div>
+                </ThemeProvider>
+            </div>
         )
     }
 }
-const styles = {
-    button: {
-        margin: 15
-    }
-}
+
 export default ProjectNameComponent;
