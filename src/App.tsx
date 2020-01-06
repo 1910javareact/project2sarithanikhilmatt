@@ -20,7 +20,6 @@ import AddTaskComponent from './components/addtask/AddTaskComponent';
 import SetUpSuccessfulComponent from './components/setupsuccessful/SetUpSuccessfulComponent';
 import UserLoginComponent from './components/login/UserLoginComponent';
 import BoardComponent from './components/board/BoardComponent'
-// import HomeComponent from './components/home/HomeComponent';
 
 
 const App: React.FC = () => {
@@ -46,13 +45,8 @@ const App: React.FC = () => {
 
 
           <Switch>
-
-            <Route path='/home' component={HomeComponent} />
-            {/* <Route path='/options' component={OptionsComponent} /> */}
-
-            {/* <Route path = '/' component = {HomeComponent} /> */}
+            <Route path = '/' component = {UserLoginComponent} />
             <Route path ='/login' component = {UserLoginComponent} />
-
             <Route path ='/projectname' component = {ProjectNameComponent} />
             <Route path ='/groupname' component = {GroupNameComponent} />
             <Route path ='/addtask' component={AddTaskComponent} />
